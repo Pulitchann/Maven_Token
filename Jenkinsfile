@@ -11,5 +11,16 @@ pipeline {
 				sh 'mvn -B clean package'
 			}
 		}
+		stage('SonarQube analysis') {
+            environment {
+                scannerHome = tool 'SonarQubeScanner'
+            }
+   
+            steps {
+                withSonarQubeEnv(installationName: 'SonarQube') {
+                  sh 'mvn sonar:sonar'
+                }
+            }
+        }
 	}
 }
