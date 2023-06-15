@@ -46,9 +46,8 @@ public class Transform {
 	 * 				which corresponds to key of our User Hashmap
 	 * 
 	 * 				ex: Hello {firstname} ! => Hello person.get("firstname") !
-	 * @return 
 	 */
-	String transformer(String input) {
+	void transformer(String input) {
 		
 		Pattern p = Pattern.compile("\\{(.+?)\\}");
 		Matcher m = p.matcher(input);
@@ -66,7 +65,9 @@ public class Transform {
 		
 		m.appendTail(sBuffer);
 		
-		return sBuffer.toString();
+		String finalString = sBuffer.toString();
+		
+		logger.info(finalString);
 	}
 	
 }
