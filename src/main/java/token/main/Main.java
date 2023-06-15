@@ -1,4 +1,4 @@
-package token.Main;
+package token.main;
 /**
  * 
  * @author Administrateur

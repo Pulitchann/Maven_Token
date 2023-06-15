@@ -1,4 +1,4 @@
-package token.Main;
+package token.main;
 
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 
 public class Transform {
 	
-	private HashMap<String, String> person = new HashMap<String, String>();
+	private HashMap<String, String> person = new HashMap<>();
 	
 	/**
 	 * 
@@ -46,7 +46,7 @@ public class Transform {
 	 */
 	String transformer(String input) {
 		
-		Pattern p = Pattern.compile("\\{(.*?)\\}");
+		Pattern p = Pattern.compile("\\{(.+?)\\}");
 		Matcher m = p.matcher(input);
 		
 		StringBuffer sBuffer = new StringBuffer();
