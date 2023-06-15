@@ -65,9 +65,9 @@ public class Transform {
 		
 		m.appendTail(sBuffer);
 		
-		String finalString = sBuffer.toString();
+		String finalString1 = sBuffer.toString();
 		
-		logger.info(finalString);
+		logger.info(finalString1);
 	}
 	
 }
