@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 
 public class Transform {
 	
-	private static Logger Logger = LoggerFactory.getLogger(Transform.class);
+	private static Logger logger = LoggerFactory.getLogger(Transform.class);
 	
 	private HashMap<String, String> person = new HashMap<>();
 	
@@ -66,7 +66,6 @@ public class Transform {
 		
 		m.appendTail(sBuffer);
 		
-		Logger.info(sBuffer.toString());
 		return sBuffer.toString();
 	}
 	
