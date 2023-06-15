@@ -3,6 +3,8 @@ package token.main;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Transforms a text by replacing a set of tokens by
@@ -15,6 +17,8 @@ import java.util.regex.Pattern;
  */
 
 public class Transform {
+	
+	private static Logger Logger = LoggerFactory.getLogger(Transform.class);
 	
 	private HashMap<String, String> person = new HashMap<>();
 	
@@ -62,7 +66,7 @@ public class Transform {
 		
 		m.appendTail(sBuffer);
 		
-		
+		Logger.info(sBuffer.toString());
 		return sBuffer.toString();
 	}
 	
